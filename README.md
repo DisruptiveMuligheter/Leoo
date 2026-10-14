@@ -47,6 +47,5 @@ Det gamle repoet kan stå urørt som sikkerhetskopi.
 - Datoene i `data/notater.js` er hentet fra når PDF-ene ble laget. Sjekk at de stemmer med publiseringsdatoene.
 - De engelske titlene på No. 26 til 29 er nye forslag. Endre dem gjerne.
 - Bare No. 1 og No. 25 finnes på engelsk. Den gamle engelske siden lenket til filer i mappen `english/` som aldri ble lastet opp, så de lenkene var brutte. Engelske lesere får nå den norske versjonen med en merknad.
-- Fyll inn `bok_kjop` i `data/innstillinger.js` for å vise knappen Kjøp boken.
 - Les gjennom bokteksten og introduksjonen. Teksten bygger på hensiktsavsnittet på forsiden av notatene.
 - Bakgrunnsvideoen fra den gamle siden er ikke med. Siden laster raskere uten den.

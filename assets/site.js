@@ -89,6 +89,6 @@
     if (oppsett.epost) { a.href = "mailto:" + oppsett.epost; a.textContent = oppsett.epost; }
   });
   document.querySelectorAll("[data-bok-kjop]").forEach(function (a) {
-    if (oppsett.bok_kjop) a.href = oppsett.bok_kjop; else a.hidden = true;
+    if (oppsett.bok_kjop) { a.href = oppsett.bok_kjop; a.target = "_blank"; a.rel = "noopener"; } else a.hidden = true;
   });
 })();
