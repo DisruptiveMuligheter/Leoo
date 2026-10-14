@@ -62,11 +62,7 @@ a:hover { color: var(--blekk); }
 .topp nav a:hover { color: var(--blekk); }
 .topp nav { align-items: center; }
 .topp nav .sprak { color: var(--blekk); font-weight: 600; }
-.topp nav .nav-knapp {
-  background: var(--natt); color: #fff; font-weight: 600;
-  padding: 8px 16px; border-radius: 3px;
-}
-.topp nav .nav-knapp:hover { background: var(--blekk); color: #fff; }
+
 
 /* Åpning */
 .aapning { background: var(--papir); padding: clamp(40px, 7vw, 88px) 0 clamp(48px, 7vw, 96px); }
