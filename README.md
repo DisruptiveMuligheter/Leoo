@@ -46,6 +46,6 @@ Det gamle repoet kan stå urørt som sikkerhetskopi.
 
 - Datoene i `data/notater.js` er hentet fra når PDF-ene ble laget. Sjekk at de stemmer med publiseringsdatoene.
 - De engelske titlene på No. 26 til 29 er nye forslag. Endre dem gjerne.
-- No. 1, No. 25 og No. 29 finnes på engelsk. Den gamle engelske siden lenket til filer i mappen `english/` som aldri ble lastet opp, så de lenkene var brutte. Engelske lesere får nå den norske versjonen med en merknad.
+- No. 1, No. 25, No. 28 og No. 29 finnes på engelsk. Den gamle engelske siden lenket til filer i mappen `english/` som aldri ble lastet opp, så de lenkene var brutte. Engelske lesere får nå den norske versjonen med en merknad.
 - Les gjennom bokteksten og introduksjonen. Teksten bygger på hensiktsavsnittet på forsiden av notatene.
 - Bakgrunnsvideoen fra den gamle siden er ikke med. Siden laster raskere uten den.
