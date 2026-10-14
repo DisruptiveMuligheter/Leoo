@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fant ikke siden | Disruptive Perspektiver</title>
+  <meta name="robots" content="noindex">
+  <style>
+    body { margin: 0; font-family: Georgia, serif; font-size: 1.125rem; line-height: 1.6; color: #13262b; background: #f2f5f4; }
+    main { max-width: 640px; margin: 0 auto; padding: 18vh 24px 64px; }
+    h1 { font-family: system-ui, sans-serif; font-weight: 600; letter-spacing: -0.02em; font-size: 2rem; line-height: 1.15; }
+    a { color: #11625f; }
+  </style>
+  <script>
+    // Sender gamle lenker (fra den forrige nettsiden) videre til riktig fil på den nye.
+    (function () {
+      var gamle = {"AI Infra - Disruptive Perspektiver No.1.pdf": "pdf/no/01-ai-infrastruktur.pdf", "AI Infrastructure - Disruptive Perspectives No.1.pdf": "pdf/en/01-ai-infrastructure.pdf", "Wealth of Nations - Disruptive Perspektiver No.2.pdf": "pdf/no/02-wealth-of-nations.pdf", "Digital Føydaløkonomi - Disruptive Perspektiver No.3.pdf": "pdf/no/03-digital-foydalokonomi.pdf", "Digitale Agenter - Disruptive Perspektiver No. 4.pdf": "pdf/no/04-digitale-ai-agenter.pdf", "Jakten på Metaverse - Disruptive Perspektiver No.5.pdf": "pdf/no/05-jakten-pa-metaverset.pdf", "Kina 2.0 - Disruptive Perspektiver no.6.pdf": "pdf/no/06-kina-2-0.pdf", "Fysiske Agenter - Disruptive Perspektiver No.7.pdf": "pdf/no/07-fysiske-ai-agenter.pdf", "Selvkjørende Agenter - Disruptive Perspektiver No. 8.pdf": "pdf/no/08-selvkjorende-agenter.pdf", "Disruptive Teorier - Disruptive Perspektiver No. 9.pdf": "pdf/no/09-disruptive-teorier.pdf", "Mange-gangern - Disruptive Perspektiver No.10.pdf": "pdf/no/10-mange-gangern.pdf", "Dot-com vs AI - Disruptive Perspektiver No.11.pdf": "pdf/no/11-dot-com-vs-ai.pdf", "Ordkommando - Disruptive Perspektiver No. 12.pdf": "pdf/no/12-ordkommando.pdf", "Disruptivt Digitalt Amerikabrev - Disruptive Perspektiver No.13.pdf": "pdf/no/13-disruptivt-amerikabrev.pdf", "Tesla-telefon - Disruptive Perspektiver No.14.pdf": "pdf/no/14-tesla-telefon.pdf", "Humanoids i hjemmet - Disruptive Perspektiver No.15.pdf": "pdf/no/15-humanoider-i-hjemmet.pdf", "Forsikringsbransjens disrupsjon - Disruptive Perspektiver No.16.pdf": "pdf/no/16-forsikringsbransjens-disrupsjon.pdf", "Beta og TE - Disruptive Perspektiver No.17.pdf": "pdf/no/17-beta-og-tracking-error.pdf", "CES 2026 - Disruptive Perspektiver No.18.pdf": "pdf/no/18-ces-2026.pdf", "Edge AI - Disruptive Perspektiver No.19.pdf": "pdf/no/19-edge-ai.pdf", "Droner - Disruptive Perspektiver No.20.pdf": "pdf/no/20-droner.pdf", "Selvkjørende lastebiler - Disruptive Perspektiver No.21.pdf": "pdf/no/21-selvkjorende-lastebiler.pdf", "Humanoids - Disruptive Perspektiver No.22.pdf": "pdf/no/22-humanoider.pdf", "Maskinbyråkratiet - Disruptive Perspektiver No.23.pdf": "pdf/no/23-maskinbyrakratiet.pdf", "Verdensrommets Renessanse - Disruptive Perspektiver No. 24.pdf": "pdf/no/24-verdensrommets-renessanse.pdf", "Dataens Rolle for AI - Disruptive Perspektiver No. 25.pdf": "pdf/no/25-dataens-rolle-for-ai.pdf", "Data's Role for AI - Disruptive Perspectives No 25 (EN).pdf": "pdf/en/25-data-s-role-for-ai.pdf", "Minne - Disruptive Perspektiver No.26.pdf": "pdf/no/26-minne.pdf", "Fremtidens Ansikt - Disruptive Perspektiver No. 27.pdf": "pdf/no/27-fremtidens-ansikt.pdf", "Reisebrev fra silicon valley - Disruptive Perspektiver No. 28.pdf": "pdf/no/28-reisebrev-fra-silicon-valley.pdf", "Agentene angriper kjøpsprosessen - Disruptive Perspektiver No. 29.pdf": "pdf/no/29-agentene-angriper-kjopsprosessen.pdf", "english.html": "en/"};
+      var nummer = {"1": {"no": "pdf/no/01-ai-infrastruktur.pdf", "en": "pdf/en/01-ai-infrastructure.pdf"}, "2": {"no": "pdf/no/02-wealth-of-nations.pdf", "en": null}, "3": {"no": "pdf/no/03-digital-foydalokonomi.pdf", "en": null}, "4": {"no": "pdf/no/04-digitale-ai-agenter.pdf", "en": null}, "5": {"no": "pdf/no/05-jakten-pa-metaverset.pdf", "en": null}, "6": {"no": "pdf/no/06-kina-2-0.pdf", "en": null}, "7": {"no": "pdf/no/07-fysiske-ai-agenter.pdf", "en": null}, "8": {"no": "pdf/no/08-selvkjorende-agenter.pdf", "en": null}, "9": {"no": "pdf/no/09-disruptive-teorier.pdf", "en": null}, "10": {"no": "pdf/no/10-mange-gangern.pdf", "en": null}, "11": {"no": "pdf/no/11-dot-com-vs-ai.pdf", "en": null}, "12": {"no": "pdf/no/12-ordkommando.pdf", "en": null}, "13": {"no": "pdf/no/13-disruptivt-amerikabrev.pdf", "en": null}, "14": {"no": "pdf/no/14-tesla-telefon.pdf", "en": null}, "15": {"no": "pdf/no/15-humanoider-i-hjemmet.pdf", "en": null}, "16": {"no": "pdf/no/16-forsikringsbransjens-disrupsjon.pdf", "en": null}, "17": {"no": "pdf/no/17-beta-og-tracking-error.pdf", "en": null}, "18": {"no": "pdf/no/18-ces-2026.pdf", "en": null}, "19": {"no": "pdf/no/19-edge-ai.pdf", "en": null}, "20": {"no": "pdf/no/20-droner.pdf", "en": null}, "21": {"no": "pdf/no/21-selvkjorende-lastebiler.pdf", "en": null}, "22": {"no": "pdf/no/22-humanoider.pdf", "en": null}, "23": {"no": "pdf/no/23-maskinbyrakratiet.pdf", "en": null}, "24": {"no": "pdf/no/24-verdensrommets-renessanse.pdf", "en": null}, "25": {"no": "pdf/no/25-dataens-rolle-for-ai.pdf", "en": "pdf/en/25-data-s-role-for-ai.pdf"}, "26": {"no": "pdf/no/26-minne.pdf", "en": null}, "27": {"no": "pdf/no/27-fremtidens-ansikt.pdf", "en": null}, "28": {"no": "pdf/no/28-reisebrev-fra-silicon-valley.pdf", "en": null}, "29": {"no": "pdf/no/29-agentene-angriper-kjopsprosessen.pdf", "en": null}};
+      var sti = location.pathname;
+      var rot = "/";
+      if (/github\.io$/.test(location.hostname)) {
+        var forste = sti.split("/")[1];
+        if (forste) rot = "/" + forste + "/";
+      }
+      var navn = decodeURIComponent(sti.split("/").pop() || "");
+      var maal = gamle[navn];
+      if (!maal) {
+        var m = navn.match(/No\.?\s*(\d+)/i);
+        if (m && nummer[m[1]]) {
+          var engelsk = /perspectives|english|\(EN\)/i.test(decodeURIComponent(sti));
+          maal = (engelsk && nummer[m[1]].en) || nummer[m[1]].no;
+        }
+      }
+      if (maal) location.replace(rot + maal);
+      window.ROT = rot;
+    })();
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Fant ikke siden</h1>
+    <p>Lenken kan være gammel, eller filen kan ha fått nytt navn. Alle notatene ligger samlet på forsiden.</p>
+    <p><a id="hjem" href="/">Gå til forsiden</a></p>
+  </main>
+  <script>document.getElementById("hjem").href = window.ROT || "/";</script>
+</body>
+</html>

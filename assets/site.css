@@ -1,0 +1,239 @@
+/* Disruptive Perspektiver
+   Farger hentet fra notatforsidene (petrol) og bokomslaget (natteblå). */
+
+:root {
+  --papir: #ffffff;
+  --flate: #f2f5f4;
+  --blekk: #13262b;
+  --demp: #56676c;
+  --linje: #d3dcda;
+  --petrol: #1b8785;      /* fra forsidebåndet, til flater */
+  --petrol-tekst: #11625f; /* mørkere variant som holder kontrast i tekst */
+  --natt: #082358;        /* fra bokomslaget */
+  --natt-lys: #c9d6ee;
+
+  --sans: "Bricolage Grotesque", system-ui, sans-serif;
+  --serif: "Newsreader", Georgia, serif;
+
+  --bredde: 1160px;
+  --kant: clamp(16px, 4vw, 40px);
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--flate);
+  color: var(--blekk);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--petrol-tekst); text-underline-offset: 0.18em; }
+a:hover { color: var(--blekk); }
+:focus-visible { outline: 3px solid var(--petrol); outline-offset: 3px; border-radius: 2px; }
+
+.wrap { max-width: var(--bredde); margin: 0 auto; padding: 0 var(--kant); }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+.hopp { position: absolute; left: -9999px; }
+.hopp:focus { left: 16px; top: 16px; background: var(--papir); padding: 8px 12px; z-index: 10; }
+
+/* Toppfelt */
+.topp {
+  background: var(--papir);
+  border-bottom: 1px solid var(--linje);
+}
+.topp .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; min-height: 64px; flex-wrap: wrap;
+}
+.merke {
+  font-family: var(--sans); font-weight: 700; font-size: 1.05rem;
+  color: var(--blekk); text-decoration: none; letter-spacing: -0.01em;
+  display: flex; align-items: center; gap: 10px;
+}
+.merke img { width: 26px; height: 30px; }
+.topp nav { display: flex; gap: 4px 20px; flex-wrap: wrap; font-family: var(--sans); font-size: 0.95rem; }
+.topp nav a { color: var(--demp); text-decoration: none; padding: 6px 0; }
+.topp nav a:hover { color: var(--blekk); }
+.topp nav .sprak { color: var(--blekk); font-weight: 600; }
+
+/* Åpning */
+.aapning { background: var(--papir); padding: clamp(40px, 7vw, 88px) 0 clamp(48px, 7vw, 96px); }
+.aapning .wrap {
+  display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: clamp(32px, 6vw, 80px); align-items: center;
+}
+.aapning h1 {
+  font-family: var(--sans); font-weight: 600;
+  font-size: clamp(2.1rem, 4.6vw, 3.6rem); line-height: 1.06;
+  letter-spacing: -0.025em; margin: 0 0 24px; max-width: 18ch;
+  font-variation-settings: "wdth" 85;
+}
+.aapning .ingress { font-size: 1.25rem; line-height: 1.55; max-width: 36em; margin: 0 0 12px; }
+.aapning .forfattere { color: var(--demp); font-size: 1.05rem; max-width: 36em; margin: 0 0 32px; }
+.knapper { display: flex; flex-wrap: wrap; gap: 12px; }
+.knapp {
+  font-family: var(--sans); font-weight: 600; font-size: 1rem;
+  display: inline-flex; align-items: center; min-height: 48px;
+  padding: 0 22px; border-radius: 3px; text-decoration: none;
+  background: var(--petrol); color: #fff; border: 1px solid var(--petrol);
+}
+.knapp:hover { background: var(--petrol-tekst); border-color: var(--petrol-tekst); color: #fff; }
+.knapp.sekundar { background: transparent; color: var(--blekk); border-color: var(--blekk); }
+.knapp.sekundar:hover { background: var(--blekk); color: #fff; }
+
+/* Siste notat i åpningen */
+.siste { position: relative; text-decoration: none; color: inherit; display: block; justify-self: center; width: min(100%, 360px); }
+.siste figure { margin: 0; }
+.siste img {
+  width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: top;
+  border: 1px solid var(--linje);
+  box-shadow: 0 1px 0 var(--linje), 18px 18px 0 -1px var(--flate);
+}
+.siste figcaption { font-family: var(--sans); margin-top: 18px; }
+.siste .hva { color: var(--demp); font-size: 0.95rem; display: block; }
+.siste .navn { font-weight: 600; font-size: 1.25rem; line-height: 1.25; display: block; }
+.siste:hover .navn { text-decoration: underline; text-underline-offset: 0.18em; }
+.siste .frimerke { position: absolute; top: -18px; right: -14px; transform: rotate(4deg); }
+
+/* Frimerket med notatnummer. Takkene lages med en maske. */
+.frimerke {
+  --hull: 3.2px;
+  width: 60px; height: 70px; padding: 5px;
+  background: var(--papir);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    radial-gradient(circle, #0000 var(--hull), #000 calc(var(--hull) + 0.6px)) -5px -5px / 10px 10px;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    radial-gradient(circle, #0000 var(--hull), #000 calc(var(--hull) + 0.6px)) -5px -5px / 10px 10px;
+  filter: drop-shadow(0 1px 1px rgba(19, 38, 43, 0.25));
+  font-family: var(--sans);
+}
+.frimerke span {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 100%; border: 1.5px solid var(--petrol); color: var(--petrol-tekst);
+  line-height: 1;
+}
+.frimerke small { font-size: 0.7rem; font-weight: 500; }
+.frimerke b { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.03em; margin-top: 2px; }
+
+/* Arkiv */
+.arkiv { padding: clamp(48px, 7vw, 88px) 0; }
+.arkiv-hode {
+  display: flex; justify-content: space-between; align-items: end;
+  gap: 16px 32px; flex-wrap: wrap; margin-bottom: 32px;
+}
+h2 {
+  font-family: var(--sans); font-weight: 600; letter-spacing: -0.02em;
+  font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; margin: 0 0 8px;
+}
+.arkiv-hode p { margin: 0; color: var(--demp); }
+.sok { font-family: var(--sans); display: flex; flex-direction: column; gap: 6px; width: min(100%, 320px); }
+.sok label { font-size: 0.9rem; color: var(--demp); }
+.sok input {
+  font: inherit; font-size: 1rem; padding: 0 14px; min-height: 46px;
+  border: 1px solid var(--linje); border-radius: 3px; background: var(--papir); color: var(--blekk);
+}
+.sok input:focus-visible { outline-offset: 0; }
+
+.notater {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 32px 24px;
+}
+.notat a { display: block; text-decoration: none; color: inherit; position: relative; }
+.notat .bilde {
+  aspect-ratio: 1 / 1; overflow: hidden; background: var(--petrol);
+}
+.notat img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.notat .frimerke { position: absolute; top: 10px; left: 10px; width: 50px; height: 60px; }
+.notat .frimerke b { font-size: 1.3rem; }
+.notat h3 {
+  font-family: var(--sans); font-weight: 600; font-size: 1.15rem; line-height: 1.25;
+  margin: 14px 0 4px; letter-spacing: -0.01em;
+}
+.notat a:hover h3 { text-decoration: underline; text-underline-offset: 0.18em; }
+.notat .meta { font-family: var(--sans); font-size: 0.9rem; color: var(--demp); margin: 0; }
+.notat .meta .merknad { display: block; }
+.tomt { font-family: var(--sans); color: var(--demp); padding: 24px 0; }
+
+/* Boken, satt opp som baksiden av et postkort */
+.boken { background: var(--natt); color: #fff; padding: clamp(48px, 7vw, 96px) 0; }
+.postkort {
+  background: var(--papir); color: var(--blekk);
+  display: grid; grid-template-columns: minmax(0, 1.15fr) 1px minmax(0, 0.85fr);
+  gap: clamp(24px, 4vw, 48px);
+  padding: clamp(24px, 4vw, 48px);
+  border-radius: 4px;
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+}
+.postkort .skille { background: var(--linje); }
+.postkort h2 { margin-bottom: 16px; }
+.postkort .melding p { margin: 0 0 16px; max-width: 34em; }
+.postkort .melding p:last-of-type { margin-bottom: 28px; }
+.postkort .adresse { display: flex; flex-direction: column; }
+.postkort .hjorne { display: flex; justify-content: flex-end; align-items: flex-start; gap: 4px; margin-bottom: 32px; }
+.stempel {
+  width: 104px; height: 104px; border-radius: 50%;
+  border: 2px solid var(--natt); color: var(--natt);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-family: var(--sans); font-weight: 600; line-height: 1.1; text-align: center;
+  transform: rotate(-12deg) translate(22px, 30px); opacity: 0.75; z-index: 1;
+}
+.stempel small { font-size: 0.72rem; font-weight: 500; }
+.stempel b { font-size: 1.35rem; }
+.omslag-merke {
+  width: 150px; padding: 6px; background: var(--papir);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    radial-gradient(circle, #0000 3.2px, #000 3.8px) -5px -5px / 10px 10px;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    radial-gradient(circle, #0000 3.2px, #000 3.8px) -5px -5px / 10px 10px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+.omslag-merke img { aspect-ratio: 832 / 1040; object-fit: cover; }
+.linjer { margin: auto 0 0; padding: 0; list-style: none; font-family: var(--serif); font-style: italic; font-size: 1.15rem; }
+.linjer li { border-bottom: 1px solid var(--linje); padding: 10px 0 6px; }
+
+/* Påmelding */
+.pamelding { padding: clamp(48px, 7vw, 88px) 0; }
+.pamelding .wrap {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 48px; align-items: center;
+}
+.pamelding p { margin: 0; color: var(--demp); max-width: 38em; }
+
+/* Bunn */
+.bunn { border-top: 1px solid var(--linje); padding: 32px 0 48px; font-family: var(--sans); font-size: 0.95rem; color: var(--demp); }
+.bunn .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; }
+.bunn p { margin: 0; max-width: 46em; }
+
+/* 404 */
+.feil { min-height: 60vh; display: flex; align-items: center; padding: 64px 0; }
+.feil p { max-width: 36em; }
+
+@media (max-width: 820px) {
+  .aapning .wrap { grid-template-columns: 1fr; }
+  .siste { justify-self: start; width: min(100%, 300px); margin-top: 8px; }
+  .postkort { grid-template-columns: 1fr; }
+  .postkort .skille { height: 1px; }
+  .postkort .adresse { order: -1; }
+  .postkort .hjorne { margin-bottom: 8px; }
+  .pamelding .wrap { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .notater { grid-template-columns: 1fr 1fr; gap: 24px 14px; }
+  .notat .frimerke { width: 40px; height: 50px; top: 6px; left: 6px; }
+  .notat .frimerke small { font-size: 0.6rem; }
+  .notat .frimerke b { font-size: 1.05rem; }
+  .notat h3 { font-size: 1rem; }
+  .siste .frimerke { right: -6px; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+[hidden] { display: none !important; }
