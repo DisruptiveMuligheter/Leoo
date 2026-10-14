@@ -4,8 +4,7 @@ window.INNSTILLINGER = {
   pamelding: "https://forms.office.com/e/M5R3mPFwyi",
 
   // Kontaktadresse
-  epost: "Leo.Rundgren.Olsen@dnb.no",
+  epost: "Leo.Rundgren.Olsen@dnb.no"
 
-  // Lenke til der boken kan kjøpes. La stå tom ("") for å skjule knappen.
-  bok_kjop: "https://www.norli.no/boker/dokumentar-og-fakta/historie-og-dokumentar/debatt-og-samfunn/postkort-fra-fremtiden-9788271464639"
+  // Lenken til boken ligger direkte i index.html og en/index.html (søk etter norli.no)
 };

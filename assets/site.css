@@ -60,7 +60,13 @@ a:hover { color: var(--blekk); }
 .topp nav { display: flex; gap: 4px 20px; flex-wrap: wrap; font-family: var(--sans); font-size: 0.95rem; }
 .topp nav a { color: var(--demp); text-decoration: none; padding: 6px 0; }
 .topp nav a:hover { color: var(--blekk); }
+.topp nav { align-items: center; }
 .topp nav .sprak { color: var(--blekk); font-weight: 600; }
+.topp nav .nav-knapp {
+  background: var(--natt); color: #fff; font-weight: 600;
+  padding: 8px 16px; border-radius: 3px;
+}
+.topp nav .nav-knapp:hover { background: var(--blekk); color: #fff; }
 
 /* Åpning */
 .aapning { background: var(--papir); padding: clamp(40px, 7vw, 88px) 0 clamp(48px, 7vw, 96px); }
