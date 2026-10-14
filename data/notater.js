@@ -1,5 +1,6 @@
 // Listen over alle notater. Nytt notat? Legg PDF-en i pdf/no/ og legg til en linje nederst.
 // dato er år-måned (ÅÅÅÅ-MM). pdf_en er null når det ikke finnes engelsk versjon.
+// Valgfritt for engelsk versjon: sider_en (antall sider) og forside_en (engelsk forsidebilde).
 window.NOTATER = [
   {"nr": 1, "tittel": "AI-infrastruktur", "tittel_en": "AI Infrastructure", "dato": "2025-06", "sider": 58, "pdf": "pdf/no/01-ai-infrastruktur.pdf", "pdf_en": "pdf/en/01-ai-infrastructure.pdf", "forside": "assets/forsider/01.webp"},
   {"nr": 2, "tittel": "Wealth of Nations", "tittel_en": "Wealth of Nations", "dato": "2025-06", "sider": 73, "pdf": "pdf/no/02-wealth-of-nations.pdf", "pdf_en": null, "forside": "assets/forsider/02.webp"},
@@ -29,5 +30,5 @@ window.NOTATER = [
   {"nr": 26, "tittel": "Minne", "tittel_en": "Memory", "dato": "2026-08", "sider": 52, "pdf": "pdf/no/26-minne.pdf", "pdf_en": null, "forside": "assets/forsider/26.webp"},
   {"nr": 27, "tittel": "Fremtidens ansikt", "tittel_en": "The Face of the Future", "dato": "2026-09", "sider": 30, "pdf": "pdf/no/27-fremtidens-ansikt.pdf", "pdf_en": null, "forside": "assets/forsider/27.webp"},
   {"nr": 28, "tittel": "Reisebrev fra Silicon Valley", "tittel_en": "Letter from Silicon Valley", "dato": "2026-09", "sider": 35, "pdf": "pdf/no/28-reisebrev-fra-silicon-valley.pdf", "pdf_en": null, "forside": "assets/forsider/28.webp"},
-  {"nr": 29, "tittel": "Agentene angriper kjøpsprosessen", "tittel_en": "Agents Take On the Buying Process", "dato": "2026-09", "sider": 83, "pdf": "pdf/no/29-agentene-angriper-kjopsprosessen.pdf", "pdf_en": null, "forside": "assets/forsider/29.webp"},
+  {"nr": 29, "tittel": "Agentene angriper kjøpsprosessen", "tittel_en": "Agents Take On the Buying Process", "dato": "2026-09", "sider": 83, "pdf": "pdf/no/29-agentene-angriper-kjopsprosessen.pdf", "pdf_en": "pdf/en/29-agents-take-on-the-buying-process.pdf", "sider_en": 79, "forside": "assets/forsider/29.webp", "forside_en": "assets/forsider/29-en.webp"},
 ];

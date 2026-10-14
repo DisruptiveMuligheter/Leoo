@@ -16,8 +16,10 @@
   }
   function tittel(n) { return en ? n.tittel_en : n.tittel; }
   function lenke(n) { return rot + (en && n.pdf_en ? n.pdf_en : n.pdf); }
+  function forside(n) { return en && n.pdf_en && n.forside_en ? n.forside_en : n.forside; }
   function meta(n) {
-    var deler = [dato(n.dato), n.sider + (en ? " pages" : " sider")].filter(Boolean);
+    var sider = en && n.pdf_en && n.sider_en ? n.sider_en : n.sider;
+    var deler = [dato(n.dato), sider + (en ? " pages" : " sider")].filter(Boolean);
     return deler.join(", ");
   }
   function lag(tag, attr, barn) {
@@ -42,7 +44,7 @@
     siste.href = lenke(n);
     siste.appendChild(frimerke(n.nr));
     siste.appendChild(lag("figure", {}, [
-      lag("img", { src: rot + n.forside, alt: "", width: "510", height: "720" }),
+      lag("img", { src: rot + forside(n), alt: "", width: "510", height: "720" }),
       lag("figcaption", {}, [
         lag("span", { class: "hva", tekst: (en ? "Latest, No. " : "Siste notat, No. ") + n.nr }),
         lag("span", { class: "navn", tekst: tittel(n) })
@@ -68,7 +70,7 @@
       liste.appendChild(lag("li", { class: "notat" }, [
         lag("a", { href: lenke(n), "aria-label": "No. " + n.nr + ", " + tittel(n) }, [
           frimerke(n.nr),
-          lag("div", { class: "bilde" }, [n.forside ? lag("img", { src: rot + n.forside, alt: "", loading: "lazy", width: "510", height: "720", onerror: "this.remove()" }) : null]),
+          lag("div", { class: "bilde" }, [n.forside ? lag("img", { src: rot + forside(n), alt: "", loading: "lazy", width: "510", height: "720", onerror: "this.remove()" }) : null]),
           lag("h3", { tekst: tittel(n) }),
           metaEl
         ])
